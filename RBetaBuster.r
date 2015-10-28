@@ -1,5 +1,5 @@
 ## To source this file into R session, type:
-## source("https://github.com/skyshixia/Rfunction/RBetaBuster.R")
+# source('https://raw.githubusercontent.com/skyshixia/Rfunction/master/RBetaBuster.r')
 
 ## input
 # percentile: percentile, e.g. 0.05, 0.99 etc
