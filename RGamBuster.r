@@ -20,17 +20,17 @@ RGamBuster <- function(percentile, percentileValue, momeValue, mu=FALSE){
 			print("Given mode,")
 	}
 
-	b = 1:1000/100
+	b = 1:10000/100
 	a = b2a(stats, b)
 	li = qgamma(qth, a, b)
 
 	intb = which((diff(li >= qthValue, lag=1)) != 0)/100
 
-	decb = intb + b/1000
+	decb = intb + b/10000
 	a = b2a(stats, decb)
 	li2 = qgamma(qth, a, decb)
 
-	realb = round(intb + which((diff(li2 >= qthValue, lag=1)) != 0)/100000, 3)
+	realb = round(intb + which((diff(li2 >= qthValue, lag=1)) != 0)/1000000, 3)
 	reala = round(b2a(stats, realb), 3)
 
 	answer = list("a is", reala, "b is", realb)
